@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="./1.1.2.css">
 	<title>Document</title>
 </head>
 <body>
@@ -39,28 +40,27 @@
 			</section>
 			<p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了</br>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了</br>这是一个很长很长的段落，<a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落，<b>这是粗体字</b>这是一个很长很长的段落，这是一个很长很长的段落。</p>
 			<img src="2.jpg" alt="这是第二张图片">
-			<section>
-				<ul>
-					<li>列表项目一</li>
-					<li>列表项目二</li>
-					<li>列表项目三</li>
-				</ul>
-			</section>
-			<aside>
-				<h2>图片</h2>
-				<div>
-					<p>好看的图片</p>
-					<img src="3.jpg" alt="好看的图片">
-				</div>
-				<div>
-					<p>好看的图片</p>
-					<img src="3.jpg" alt="好看的图片">
-				</div>
-				<div>
-					<p>好看的图片</p>
-					<img src="3.jpg" alt="好看的图片">
-				</div>
-			</aside>
+			<ul>
+				<li>列表项目一</li>
+				<li>列表项目二</li>
+				<li>列表项目三</li>
+			</ul>
+		</article>
+
+		<article class="pics">
+			<h1>图片</h2>
+			<div>
+				<p>好看的图片</p>
+				<img src="3.jpg" alt="好看的图片">
+			</div>
+			<div>
+				<p>好看的图片</p>
+				<img src="3.jpg" alt="好看的图片">
+			</div>
+			<div>
+				<p>好看的图片</p>
+				<img src="3.jpg" alt="好看的图片">
+			</div>
 		</article>
 
 		<article id="article3">
@@ -98,7 +98,7 @@
 						<td>表单元格</td>
 						<td><a href="javascript: void 0">操作</a></td>
 					</tr>
-					<tr>
+					<tr class="lastRow">
 						<td>总计</td>
 						<td colspan="2">1000</td>
 					</tr>
@@ -111,39 +111,49 @@
 			<div id="registry">
 				<h1>侧栏注册窗口标题</h1>
 				<form action="signup.php" method="post">
-					<label for="email">请输入邮箱地址：<input type="email" name="email" id="email" placeholder="这是一个邮箱输入框"></label>
-					<div><p>邮箱地址请按要求格式输入</p></div>
-
-					<label for="pwd1">请输入密码：<input type="password" name="pwd1" id="pwd1" placeholder="这是一个密码输入框"></label>
-					<label for="pwd2">&nbsp;&nbsp;&nbsp;请重复输入密码：<input type="password" name="pwd2" id="pwd2" placeholder="这是一个密码输入框"></label>
-					<div><p>密码请为6-16位英文数字</p></div>
-
-					<label for="gender">性别：<input type="radio" value="male" name="gender" id="gender" checked="checked">男&nbsp;&nbsp;<input type="radio" value="female" name="gender" id="gender">女&nbsp;&nbsp;</label>
-
-					<label for="city">城市：
-						<select name="city" id="city">
-							<option value="Beijing" selected="selected">北京</option>
-							<option value="Shanghai">上海</option>
-							<option value="Guangzhou">广州</option>
-							<option value="Shenzhen">深圳</option>
-							<option value="Hangzhou">杭州</option>
-						</select>
-					</label>
-
-					<label for="hobbies">&nbsp;&nbsp;爱好：
-						<input type="checkbox" name="hobbies" value="sports">运动
-						<input type="checkbox" name="hobbies" value="art">艺术
-						<input type="checkbox" name="hobbies" value="science">科学
-					</label>
-
-					<label for="description">&nbsp;&nbsp;个人描述:
-						<textarea rows="3">这是一个多行输入框</textarea>
-					</label>
-
-					<label for="submit">
-						<input type="submit" name="submit" value="确认提交1">
-						<button type="submit">确认提交2</button>
-					</label>
+					<div>
+						<label for="email">请输入邮箱地址：<input type="email" name="email" id="email" placeholder="这是一个邮箱输入框"></label>
+						<div><p>邮箱地址请按要求格式输入</p></div>
+					</div>
+					<div>
+						<label for="pwd1">请输入密码：<input type="password" name="pwd1" id="pwd1" placeholder="这是一个密码输入框"></label>
+					</div>
+					<div>
+						<label for="pwd2">请重复输入密码：<input type="password" name="pwd2" id="pwd2" placeholder="这是一个密码输入框"></label>
+						<div><p>密码请为6-16位英文数字</p></div>
+					</div>
+					<div>
+						<label for="gender">性别：<input type="radio" value="male" name="gender" id="gender" checked="checked">男&nbsp;&nbsp;<input type="radio" value="female" name="gender" id="gender">女&nbsp;&nbsp;</label>
+					</div>
+					<div>
+						<label for="city">城市：
+							<select name="city" id="city">
+								<option value="Beijing" selected="selected">北京</option>
+								<option value="Shanghai">上海</option>
+								<option value="Guangzhou">广州</option>
+								<option value="Shenzhen">深圳</option>
+								<option value="Hangzhou">杭州</option>
+							</select>
+						</label>
+					</div>
+					<div>
+						<label for="hobbies">爱好：
+							<input type="checkbox" name="hobbies" value="sports">运动
+							<input type="checkbox" name="hobbies" value="art">艺术
+							<input type="checkbox" name="hobbies" value="science">科学
+						</label>
+					</div>
+					<div>
+						<label for="description">个人描述:
+							<textarea rows="3">这是一个多行输入框</textarea>
+						</label>
+					</div>
+					<div>
+						<label for="submit">
+							<input type="submit" name="submit" value="确认提交1">
+							<button type="submit">确认提交2</button>
+						</label>
+					</div>
 				</form>
 			</div>
 		</aside>
