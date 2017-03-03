@@ -1,0 +1,39 @@
+main {
+	padding: 20px;
+	background-color: #eee;
+	border: 1px #999 solid;
+	overflow: hidden;
+}
+
+.middle, .left, .right {
+	border: 1px solid #999;
+	background-color: #fff;
+}
+
+.middle {
+	padding: 20px;
+	margin: 0 180px 0 260px;
+	width: auto;
+}
+
+.left {
+	padding: 20px;
+	width: 200px;
+	float: left;
+}
+
+.left div{
+	float: right;
+	margin: 5px;
+	text-align: center;
+}
+
+.right {
+	padding: 20px;
+	width: 120px;
+	float: right;
+}
+
+.right img {
+	margin: 10px 20px;
+}
