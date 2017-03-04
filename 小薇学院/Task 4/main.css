@@ -1,0 +1,31 @@
+#container {
+	width: 400px;
+	height: 200px;
+	background-color: #ccc;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	overflow: hidden;
+}
+
+#corner1, #corner2 {
+	width: 100px;
+	height: 100px;
+	background-color: #fc0;
+	position: absolute;
+}
+
+#corner1 {
+	left: -50px;
+	top: -50px;
+	border-radius: 50%;
+}
+
+#corner2 {
+	right: -50px;
+	bottom: -50px;
+	border-radius: 50%;
+}
