@@ -1,0 +1,175 @@
+/** {
+	margin: 0;
+	padding: 0;
+	border: none;
+}*/
+
+body {
+	margin: 0;
+	background-color: #dedede;
+}
+
+header, footer {
+	color: white;
+	background-color: black;
+	height: 80px;
+	width: 100%;
+}
+
+footer div{
+	margin: auto 45%;
+	position: relative;
+	top: 40%;
+}
+
+/*header {
+	padding: 0 2em;
+}*/
+
+
+header h1 {
+	font-size: 25px;
+	float: left;
+	margin: 24px 20px;
+}
+
+header nav {
+	float: right;
+	margin: 12px 20px;
+}
+
+header li {
+	display: inline;
+}
+
+header a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 13px;
+	margin: auto 7px;
+}
+
+main {
+	padding: 20px;
+	background-color: #dedede;
+}
+
+main article,aside {
+	background-color: #fff;
+	padding: 10px 20px;
+	margin: 15px 5px;
+}
+
+article h2 {
+	font-size: 18px;
+	color: #989491;
+}
+
+article section {
+	font-size: 14px;
+	color: #989491;
+}
+
+article p {
+	line-height: 2em;
+}
+
+#article2 li {
+	list-style-type: none;
+	height: 1.7em;
+}
+
+.pics {
+	overflow: hidden;
+}
+
+.pics div {
+	border: 1px solid #989491;
+	width: 120px;
+	height: 130px;
+	margin: 20px 20px;
+	padding: 10px;
+	text-align: center;
+	float: left;
+}
+
+.pics p {
+	line-height: 1em;
+}
+
+#article3 li {
+	height: 1.7em;
+}
+
+#article3 p {
+	line-height: 1em;
+	margin: 1px;
+}
+
+#article3 table {
+	border-collapse: collapse;
+	width: 100%;
+	font-size: 15px;
+	border-color: #ccc;
+}
+
+#article3 table th {
+	background-color: #000;
+	color: #fff;
+	text-align: left;
+}
+
+#article3 table th,td {
+	padding: 5px;
+}
+
+#article3 table .lastRow {
+	background-color: #ccc;
+}
+
+aside h1 {
+	font-size: 18px;
+}
+
+#registry {
+	font-size: 15px;
+}
+
+#registry form {
+	padding: 0 15%;
+}
+
+#registry form p {
+	color: #ccc;
+	margin: 0
+}
+
+#registry form div {
+	margin: 10px 0;
+}
+
+#registry form div p {
+	position: relative;
+}
+
+#registry form input[type="submit"],button {
+	width: 100%;
+	background-color: blue;
+	border-radius: 10px;
+	color: white;
+	height: 40px;
+}
+
+.aside {
+	width: 300px;
+	height: 600px;
+	position: absolute;
+	top: 80px;
+	right: 0;
+	margin: 35px 20px;
+}
+
+#main {
+	margin-right: 360px;
+}
+
