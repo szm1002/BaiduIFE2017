@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<h3>污染城市列表</h3>
+	<ul id="aqi_list"></ul>
+
+<script type="text/javascript">
+
+/*
+  遍历读取aqiData中各个城市的数据
+  将空气质量指数大于60的城市显示到aqi-list的列表中
+*/
+
+	let aqiData = [
+	  ["北京", 90],
+	  ["上海", 50],
+	  ["福州", 10],
+	  ["广州", 50],
+	  ["成都", 90],
+	  ["西安", 100]
+	];
+
+	let list = document.getElementById("aqi_list");
+
+	//向ul中动态添加li的函数
+	let insertData = (arr) => {
+		let item = document.createElement("li");
+		let txt = `${arr[0]}, ${arr[1]}`;
+		item.innerHTML = txt;
+		list.appendChild(item);
+	};
+
+	(function() {
+		//通过普通for循环遍历数组
+		for (let i = aqiData.length - 1; i >= 0; i--) {
+			if (aqiData[i][1] > 60) {
+				insertData(aqiData[i]);
+			}
+		}
+
+		//通过数组对象的forEach()方法遍历数组
+		aqiData.forEach(function (value, index, array) {
+			if (value[1] > 60) {
+				insertData(value);
+			}
+		});
+
+		//通过ES6的for...of遍历数组
+		for (let val of aqiData) {
+			if (val[1] > 60) {
+				insertData(val);
+			}
+		}
+	})();
+</script>
+
+</body>
+</html>
