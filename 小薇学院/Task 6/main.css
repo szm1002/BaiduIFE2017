@@ -1,0 +1,404 @@
+body {
+	width: 980px;
+	height: 1386px;
+	margin: 5px;
+	border: 1px solid #000;
+}
+
+header {
+	margin: 0 44px;
+	border-bottom: 2px solid #938e8c;
+	font-family: 'SimHei';
+	font-size: 12px;
+	overflow: hidden;
+}
+
+#hyperlink {
+	float: left;
+	background-color: #d55d5c;
+	color: #fff;
+	width: 110px;
+	height: 61px;
+	position: relative;
+}
+
+#hyperlink span {
+	position: absolute;
+	left: 5px;
+	bottom: 5px;
+}
+
+#date {
+	float: right;
+	color: #d45d5c;
+	position: relative;
+	width: 110px;
+	height: 61px;
+}
+
+#date span {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+}
+
+main #image {
+	width: 641px;
+	height: 301px;
+	margin: 40px 48px 40px 44px;
+}
+
+main #image #wrapper {
+	float: left;
+	width: 100%;
+}
+
+main #image #cover_green, #cover_red {
+	width: 191px;
+	height: 301px;
+	opacity: 0.2;
+}
+
+main #image #cover_green {
+	background-color: green;
+	float: left;
+	margin-left: -100%;
+}
+
+main #image #cover_red {
+	background-color: red;
+	float: left;
+	margin-left: -191px;
+}
+
+#former {
+	position: relative;
+	overflow: hidden;
+}
+
+#former aside {
+	width: 201px;
+	border-top: 2px solid #cc8091;
+	margin: 40px 44px 44px -2px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+#former aside p {
+	margin: 0;
+}
+
+#former .title {
+	font-size: 24px;
+	font-family: Microsoft YaHei;
+	color: #000;
+	text-decoration: underline;
+	line-height: 40px;
+	margin: 0;
+	/*text-transform: capitalize;*/
+	font-variant: small-caps;
+}
+
+/*#former .title:first-letter {
+	font-size: 30px;
+	text-decoration: none;
+}*/
+
+#former .subtitle {
+	font-size: 12px;
+	color: #676767;
+	font-family: KaiTi;
+	line-height: 10px;
+}
+
+#former #big_num {
+	font-family: Microsoft YaHei;
+	font-size: 116px;
+	color: #75b86b;
+	font-style: italic;
+	margin: 0 0 0 -20px;
+}
+
+#former #first, #second, #third {
+	font-family: Microsoft YaHei;
+	color: #cc8091;
+	float: left;
+}
+
+#former #first {
+	font-size: 55px;
+}
+
+#former #second {
+	font-size: 12px;
+	margin-top: 29px;
+}
+
+#former #third {
+	color: #ccc;
+	font-size: 12px;
+}
+
+#former section {
+	margin-left: 44px;
+	margin-top: -20px;
+}
+
+#former section article {
+	width: 230px;
+	float: left;
+	font-size: 12px;
+	line-height: 16px;
+	margin-right: 20px;
+	opacity: 0.7;
+	font-family: Microsoft YaHei;
+}
+
+#former section #article1 {
+	font-family: SimSun;
+	color: #767777;
+	opacity: 1;
+}
+
+#former section #article1 h3 {
+	font-family: Microsoft YaHei;
+	font-size: 16px;
+	text-decoration: underline;
+	font-weight: bold;
+	color: #418c59;
+}
+
+#former section #article2 h3 {
+	font-family: Microsoft YaHei;
+	font-size: 16px;
+	text-decoration: underline;
+	font-weight: bold;
+	color: #d2994f;
+}
+
+#former section #article3 h3 {
+	font-family: Microsoft YaHei;
+	font-size: 16px;
+	text-decoration: underline;
+	font-weight: bold;
+	color: #cc7680;
+}
+
+#former section #article2 {
+	color: #231815;
+}
+
+#former section #article3 span {
+	color: #cd4a48;
+	font-style: italic;
+}
+
+#former section #article3 ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+#former section #article3 li {
+	margin: 5px 0;
+}
+
+#former section #article3 #percent {
+	margin: 20px 5px;
+}
+
+div#latter {
+	margin: 20px 44px;
+	overflow: hidden;
+}
+
+div#latter article {
+	width: 415px;
+	float: left;
+}
+
+div#latter #header {
+	font-family: SimHei;
+	font-weight: bold;
+	color: #11456b;
+	font-size: 42px;
+	border-bottom: 2px solid #11456b;
+}
+
+div#latter #header p {
+	margin: 16px 0;
+}
+
+div#latter #header p span {
+	color: #f5e327;
+	font-size: 72px;
+	font-style: italic;
+}
+
+div#latter #header p#subtitle {
+	font-size: 33px;
+
+}
+
+div#latter #content {
+	font-size: 12px;
+	color: #767777;
+	font-family: SimSun;
+	line-height: 16px;
+	margin-top: 20px;
+}
+
+/*div#latter #content:first-letter {
+	font-size: 70px;
+	color: #f5e327;
+	font-family: Microsoft YaHei;
+	float: left;
+}*/
+
+div#latter #content span {
+	font-size: 70px;
+	color: #f5e327;
+	font-family: Microsoft YaHei;
+	float: left;
+	display: inline-block;
+	line-height: 70px;
+	padding: 5px;
+}
+
+div#latter #content img {
+	float: right;
+	padding: 15px;
+}
+
+div#latter #content p {
+	margin: 0;
+	text-indent: 2em;
+}
+
+div#latter aside {
+	float: right;
+	margin: 25px 0 0 0;
+	width: 458px;
+}
+
+div#latter aside #image2 {
+	height: 275px;
+}
+
+div#latter aside #image2 #title2 {
+	margin-top: -66px;
+	padding: 1px 0 0 15px;
+	height: 61px;
+	background-color: #000;
+	opacity: 0.5;
+	/*background-color: rgba(0,0,0,0.3);*/
+}
+
+div#latter aside #image2 #title2 p {
+	margin: 10px 20px;
+	border-left: 3px solid #72b16a;
+	height: 38px;
+	color: #fff;
+	font-size: 26px;
+	font-family: Microsoft YaHei;
+	padding-left: 8px;
+	opacity: 1;
+}
+
+div#latter aside #image2 #title2 p span {
+	margin-left: 10px;
+	font-size: 12px;
+	color: #72b16a;
+	font-style: italic;
+	letter-spacing: 140%;
+}
+
+div#latter aside section {
+	background-color: #eeeed6;
+	margin-top: 30px;
+	width: 459px;
+	height: 318px;
+	padding-top: 20px;
+	position: relative;
+}
+
+div#latter aside section ul {
+	list-style-type: square;
+	margin: 20px;
+}
+
+div#latter aside section li {
+	margin: 20px;
+	font-family: SimSun;
+	color: #5a5b5b;
+	font-size: 16px;
+}
+
+div#latter aside section #menu {
+	width: 260px;
+	height: 160px;
+	background-color: #d55d5c;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+div#latter aside section #left {
+	font: 110px 'Microsoft YaHei';
+	color: #fff;
+	height: 82px;
+	width: 68px;
+	border-right: 2px solid #fff;
+	margin: 40px 10px;
+	float: left;
+	/*overflow: hidden;*/
+}
+
+div#latter aside section #left span {
+	margin-top: -33px;
+	display: block;
+}
+
+div#latter aside section #right {
+	color: #fff;
+	font-family: SimHei;
+	margin-top: 38px;
+}
+
+div#latter aside section #right p {
+	margin: 10px 0;
+}
+
+div#latter aside section #helloworld {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	height: 160px;
+	width: 170px;
+	font-size: 14px;
+	color: #5a5b5b;
+	font-style: italic;
+	margin: 30px 15px 0 0;
+	font-family: SimHei;
+}
+
+div#latter aside section #helloworld span {
+	color: #d45d5c;
+	font-size: 36px;
+	display: inline-block;
+	vertical-align: top;
+	height: 14px;
+	margin-left: -10px;
+}
+
+footer {
+	margin: 0 44px;
+	border-top: 1px #938e8c solid;
+	font-family: SimHei;
+	color: #d45d5c;
+	font-size: 12px;
+}
+
+footer #footer_link {
+	float: right;
+}
