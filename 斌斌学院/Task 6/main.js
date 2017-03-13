@@ -6,6 +6,7 @@ let inputNode = document.getElementById("text_input");
 const createNode = num => {
 	let item = document.createElement("div");
 	item.style = "padding: 10px; margin:8px; background-color: red; display: inline-block;";
+	item.className = "innerNodes";
 	item.innerHTML = num.toString();
 	return item;
 };
@@ -23,12 +24,12 @@ const rightIn = num => {
 
 const leftOut = () => {
 	let removedNode = wrapper.removeChild(wrapper.firstElementChild);
-	alert(removedNode.innerHTML);
+	alert(removedNode.innerHTML.replace(/<[^<]*>/gi, ""));
 };
 
 const rightOut = () => {
 	let removedNode = wrapper.removeChild(wrapper.lastElementChild);
-	alert(removedNode.innerHTML);
+	alert(removedNode.innerHTML.replace(/<[^<]*>/gi, ""));
 };
 
 /*获取输入的值，
@@ -62,4 +63,22 @@ document.getElementById("left_out").onclick = () => {
 
 document.getElementById("right_out").onclick = () => {
 	rightOut();
+};
+
+//查询关键字并高亮显示
+document.getElementById("query_text").onclick = () => {
+	let keyword = document.getElementById("keyword").value;
+	// console.log(`${keyword}`);
+	let innerNodes = document.getElementsByClassName("innerNodes");
+	let formerText, latterText;
+	for(let innerNode of innerNodes) {
+		formerText = innerNode.innerHTML.replace(/<[^<]*>/gi, "");
+		innerNode.innerText = formerText;
+		latterText = formerText;
+		if(formerText.indexOf(keyword) !== -1) {
+			// console.log(`${keyword}`);
+			latterText = formerText.replace(eval('/'+keyword+'/g'), `<span style="color: blue; font-weight: bold;">${keyword}</span>`);
+		}
+		innerNode.innerHTML = latterText;
+	}
 };
