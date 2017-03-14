@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#always {
+			color: #b5b5b5;
+			position: relative;
+			left: 4em;
+			font-size: 0.8em;
+			display: block;
+		}
+		#empty {
+			color: #e32838;
+			position: relative;
+			left: 4em;
+			font-size: 0.8em;
+			display: none;
+		}
+		#failed {
+			color: #e32838;
+			position: relative;
+			left: 4em;
+			font-size: 0.8em;
+			display: none;
+		}
+		#success {
+			color: #71c159;
+			position: relative;
+			left: 4em;
+			font-size: 0.8em;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<label for="text_input">名称&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="text_input" id="text_input"></label>&nbsp;&nbsp;
+	<label for="verify_btn"><button name="verify_btn" id="verify_btn">验证</button></label>
+	<div id="always">必填，长度为4~16个字符</div>
+	<div id="empty">姓名不能为空</div>
+	<div id="failed">名称长度不符要求</div>
+	<div id="success">名称格式正确</div>
+
+	<script type="text/javascript">
+		let node1 = document.getElementById("always"),
+			node2 = document.getElementById("empty"),
+			node3 = document.getElementById("failed"),
+			node4 = document.getElementById("success"),
+			inputNode = document.getElementById("text_input");
+
+		document.getElementById("verify_btn").addEventListener("click", () => {
+			let str = document.getElementById("text_input").value;
+			// console.log(str);
+			let len = str.replace(/[^\x00-\xff]/ig, "**").length;
+			// console.log(len);
+			if(len === 0) {  //输入为空
+				node1.style.display = "none";
+				node2.style.display = "block";
+				node3.style.display = "none";
+				node4.style.display = "none";
+				inputNode.style.border = "1px solid #e32838";
+			} else if(len < 4 || len > 16) {  //输入长度不符要求
+				node1.style.display = "none";
+				node2.style.display = "none";
+				node3.style.display = "block";
+				node4.style.display = "none";
+				inputNode.style.border = "1px solid #e32838";
+			} else {  //输入正确
+				node1.style.display = "none";
+				node2.style.display = "none";
+				node3.style.display = "none";
+				node4.style.display = "block";
+				inputNode.style.border = "1px solid #71c159";
+			}
+		}, false);
+
+		/*document.getElementById("verify_btn").onclick = () => {
+			let str = document.getElementById("text_input").value;
+			console.log(str);
+			let len = str.replace(/[^\x00-\xff]/ig, "**").length;
+			console.log(len);
+			if(len === 0) {  //输入为空
+				node1.style.display = "none";
+				node2.style.display = "block";
+				node3.style.display = "none";
+				node4.style.display = "none";
+				inputNode.style.border = "1px solid #e32838";
+			} else if(len < 4 || len > 16) {  //输入长度不符要求
+				node1.style.display = "none";
+				node2.style.display = "none";
+				node3.style.display = "block";
+				node4.style.display = "none";
+				inputNode.style.border = "1px solid #e32838";
+			} else {  //输入正确
+				node1.style.display = "none";
+				node2.style.display = "none";
+				node3.style.display = "none";
+				node4.style.display = "block";
+				inputNode.style.border = "1px solid #71c159";
+			}
+		};*/
+	</script>
+</body>
+</html>
