@@ -1,37 +1,4 @@
-/*let node1 = document.getElementById("always"),
-	node2 = document.getElementById("empty"),
-	node3 = document.getElementById("failed"),
-	node4 = document.getElementById("success"),
-	inputNode = document.getElementById("text_input");
-
-document.getElementById("verify_btn").addEventListener("click", () => {
-	let str = document.getElementById("text_input").value;
-	// console.log(str);
-	let len = str.replace(/[^\x00-\xff]/ig, "**").length;
-	// console.log(len);
-	if(len === 0) {  //输入为空
-		node1.style.display = "none";
-		node2.style.display = "block";
-		node3.style.display = "none";
-		node4.style.display = "none";
-		inputNode.style.border = "1px solid #e32838";
-	} else if(len < 4 || len > 16) {  //输入长度不符要求
-		node1.style.display = "none";
-		node2.style.display = "none";
-		node3.style.display = "block";
-		node4.style.display = "none";
-		inputNode.style.border = "1px solid #e32838";
-	} else {  //输入正确
-		node1.style.display = "none";
-		node2.style.display = "none";
-		node3.style.display = "none";
-		node4.style.display = "block";
-		inputNode.style.border = "1px solid #71c159";
-	}
-}, false);
-
-*/
-
+/** 事件委托，在form元素上注册事件处理程序 **/
 document.querySelector("form").addEventListener("focusin", (event) => {
 	let id = event.target.id.slice(0, -6);
 	// console.log(id);
@@ -40,6 +7,12 @@ document.querySelector("form").addEventListener("focusin", (event) => {
 	}
 }, false);
 
+document.querySelector("form").addEventListener("focusout", (event) => {
+	let id = event.target.id.slice(0, -6);
+	verifyData(id);
+}, false);
+
+/** 控制输入提示块显示的函数 **/
 function showHint(id) {
 	document.getElementById(id + "_blank").style.display = "none";
 	document.getElementById(id + "_hint").style.display = "block";
@@ -75,11 +48,7 @@ function showFailed(id) {
 	document.getElementById(id + "_input").style.border = "1px solid #e32838";
 }
 
-document.querySelector("form").addEventListener("focusout", (event) => {
-	let id = event.target.id.slice(0, -6);
-	verifyData(id);
-}, false);
-
+/** 验证输入数据是否合法的函数 **/
 function verifyData(id) {
 	switch(id) {
 		case "name":
@@ -176,6 +145,7 @@ function verifyPhone() {
 	}
 }
 
+/** 为提交按钮注册事件监听程序 **/
 document.querySelector("#submit").addEventListener("click", () => {
 	if(verifyName() && verifyPwd() && verifyPwd2() && verifyEmail() && verifyPhone()) {
 		alert("恭喜，提交成功！");
