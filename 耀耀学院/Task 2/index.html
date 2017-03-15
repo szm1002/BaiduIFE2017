@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<form>
+		<div id="name">
+			<label for="name_input">名称&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name_input" id="name_input"></label>&nbsp;&nbsp;
+			<!-- <label for="verify_btn"><button name="verify_btn" id="verify_btn">验证</button></label> -->
+			<div id="name_blank"><br></div>
+			<div id="name_hint">必填，长度为4~16个字符</div>
+			<div id="name_empty">姓名不能为空</div>
+			<div id="name_failed">名称长度只能为4~16个字符</div>
+			<div id="name_success">名称格式正确</div>
+		</div>
+
+		<div id="pwd">
+			<label for="pwd_input">密码&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="pwd_input" id="pwd_input"></label>
+			<div id="pwd_blank"><br></div>
+			<div id="pwd_hint">请输入密码，长度至少6位</div>
+			<div id="pwd_empty">密码不能为空</div>
+			<div id="pwd_failed">密码长度至少6位</div>
+			<div id="pwd_success">密码可用</div>
+		</div>
+
+		<div id="pwd2">
+			<label for="pwd2_input"><div>密码确认&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="pwd2_input" id="pwd2_input"></div></label>
+			<div id="pwd2_blank"><br></div>
+			<div id="pwd2_hint">请再次输入相同的密码</div>
+			<div id="pwd2_empty">密码不能为空</div>
+			<div id="pwd2_failed">密码输入不一致</div>
+			<div id="pwd2_success">密码输入一致</div>
+		</div>
+
+		<div id="email">
+			<label for="email_input">邮箱&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" name="email_input" id="email_input"></label>
+			<div id="email_blank"><br></div>
+			<div id="email_hint">请输入您的邮箱地址</div>
+			<div id="email_empty">邮箱不能为空</div>
+			<div id="email_failed">邮箱格式错误</div>
+			<div id="email_success">邮箱格式正确</div>
+		</div>
+
+		<div id="phone">
+			<label for="phone_input">手机&nbsp;&nbsp;&nbsp;&nbsp;<input type="tel" name="phone_input" id="phone_input"></label>
+			<div id="phone_blank"><br></div>
+			<div id="phone_hint">请输入您的手机</div>
+			<div id="phone_empty">手机不能为空</div>
+			<div id="phone_failed">手机格式错误</div>
+			<div id="phone_success">手机格式正确</div>
+		</div>
+
+		<div id="submit">
+			<label for="submit"><button name="submit" id="submit">提交</button></label>
+		</div>
+	</form>
+
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
