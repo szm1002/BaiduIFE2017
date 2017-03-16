@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    width: 282px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    border: 1px solid rgb(40, 160, 176);
+    border-radius: 10px;
+}
+
+form > div {
+    margin: 10px;
+    padding: 5px;
+}
+
+form input, select {
+    margin: 5px;
+}
+
+div.school {
+    display: block;
+}
+
+div.company {
+    display: none;
+}
+
+select.school_of_Beijing {
+    display: inline-block;
+}
+
+select.school_of_Shanghai, .school_of_Hunan {
+    display: none;
+}

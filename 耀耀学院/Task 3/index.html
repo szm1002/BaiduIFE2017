@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Task 3 of Yaoyao</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+    <form action="javascript: void(0)" method="post">
+        <!-- 单选框，选择身份是在校生还是非在校生 -->
+        <div class="check">
+            <label for="identity" id="identity">
+                <input type="radio" name="identity" value="student" checked>&nbsp;在校生&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="identity" value="non-student">&nbsp;非在校生
+            </label>
+        </div>
+
+        <!-- 在校生选择学校 -->
+        <div class="school" id="school">
+            <span>学校</span>&nbsp;&nbsp;
+            <select name="city" id="city" class="city">
+                <option value="Beijing" name="city" selected>北京</option>
+                <option value="Shanghai" name="city">上海</option>
+                <option value="Hunan" name="city">湖南</option>
+            </select>&nbsp;&nbsp;
+            <select name="school_of_Beijing" id="school_of_Beijing" class="school_of_Beijing">
+                <option value="TsinghuaU" name="school_of_Beijing" selected>清华大学</option>
+                <option value="PekingU" name="school_of_Beijing">北京大学</option>
+                <option value="BUPT" name="school_of_Beijing">北京邮电大学</option>
+            </select>
+            <select name="school_of_Shanghai" id="school_of_Shanghai" class="school_of_Shanghai">
+                <option value="JiaotongU" name="school_of_Shanghai" selected>上海交通大学</option>
+                <option value="FudanU" name="school_of_Shanghai">复旦大学</option>
+            </select>
+            <select name="school_of_Hunan" id="school_of_Hunan" class="school_of_Hunan">
+                <option value="ZhongnanU" name="school_of_Hunan" selected>中南大学</option>
+                <option value="HunanU" name="school_of_Hunan">湖南大学</option>
+            </select>
+        </div>
+
+        <!-- 非在校生选择就业单位 -->
+        <div class="company" id="company">
+            <span>就业单位</span>
+            <input type="text" name="company" placeholder="请输入您的就业单位">
+        </div>
+    </form>
+
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
