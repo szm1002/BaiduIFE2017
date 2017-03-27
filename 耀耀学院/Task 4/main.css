@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 562px;
+    height: 600px;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    margin: auto;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table th, td {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+}
+
+table th {
+    border: none;
+}
+
+div.order {
+    margin: 15px 50px;
+}
+
+div.order p {
+    font-size: 0.3em;
+    color: #757575;
+    margin-top: 5px;
+}
+
+td {
+    position: relative;
+}
+
+table div {
+    position: absolute;
+}
+
+.top, .bottom {
+    width: 50px;
+    height: 10px;
+    left: 0;
+}
+
+.left, .right {
+    width: 10px;
+    height: 50px;
+    top: 0;
+}
+
+.top {
+    top: 0;
+    background-color: red;
+}
+
+.bottom {
+    bottom: 0;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
